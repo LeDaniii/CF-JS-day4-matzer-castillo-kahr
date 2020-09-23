@@ -1,25 +1,27 @@
 const button = document.getElementById("button");
-button.addEventListener(
-  "click",
-  function (event) {
-    changeColor();
-    event.preventDefault();
-  },
-  false
-);
+// button.addEventListener(
+//   "click",
+//   function (event) {
+//     changeColor();
+//     event.preventDefault();
+//   },
+//   false
+// );
+button.addEventListener("click", changeColor, false);
 // let newColor = (document.div.style.backgroundcolor = "	#FF0000");
 
 // ----- function ------
 
 function changeColor() {
-  var firstName = document.getElementById("firstName").value;
-  //   let lastName = document.getElementById("lastName").value;
-  //   let age = document.getElementById("age").value;
-  console.log(firstName);
-  if (firstName) {
-    firstName.style.color = "#FF0000";
+  let firstName = document.getElementById("firstName").value;
+  let lastName = document.getElementById("lastName").value;
+  let age = document.getElementById("age").value;
+  //   console.log(firstName);
+  if (firstName.length >= 5) {
+    document.getElementById("div1").style.color = "#FF0000";
+  } else {
+    document.getElementById("div1").style.color = "green";
   }
-
   document.getElementById("div1").innerHTML = firstName;
 }
 
