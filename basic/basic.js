@@ -16,13 +16,38 @@ function changeColor() {
   let firstName = document.getElementById("firstName").value;
   let lastName = document.getElementById("lastName").value;
   let age = document.getElementById("age").value;
-  //   console.log(firstName);
+  let profession = document.getElementById("profession");
+  let blue = document.getElementById("blue");
+  console.log(firstName);
   if (firstName.length >= 5) {
     document.getElementById("div1").style.color = "#FF0000";
   } else {
     document.getElementById("div1").style.color = "green";
   }
+
+  if (lastName.length >= 5) {
+    document.getElementById("div2").style.color = "#FF0000";
+  } else {
+    document.getElementById("div2").style.color = "green";
+  }
+
+  if (profession.value == 1) {
+    document.getElementById("div1").style.backgroundColor = "violet";
+    document.getElementById("div2").style.backgroundColor = "violet";
+    document.getElementById("div3").style.backgroundColor = "violet";
+  } else if (profession.value == 2) {
+    document.getElementById("div1").style.backgroundColor = "blue";
+    document.getElementById("div2").style.backgroundColor = "blue";
+    document.getElementById("div3").style.backgroundColor = "blue";
+  } else if (profession.value == 3) {
+    document.getElementById("div1").style.backgroundColor = "yellow";
+    document.getElementById("div2").style.backgroundColor = "yellow";
+    document.getElementById("div3").style.backgroundColor = "yellow";
+  }
+
   document.getElementById("div1").innerHTML = firstName;
+  document.getElementById("div2").innerHTML = lastName;
+  document.getElementById("div3").innerHTML = age;
 }
 
 // ----- new div -----
